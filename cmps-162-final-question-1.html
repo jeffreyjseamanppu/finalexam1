@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162 Final Question 1</title>
+<script>
+
+function getRandomCharacter(inputString) {
+  var text= "";
+  var possible;
+  for (var a= 0; a < input.length; a++){
+    if(input[a] == ""){
+      possible = ' ';
+    } else if ((input[a] == input[a].toUpperCase()) && (input[a] != input[a].toLowerCase())){
+      possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    } else if ((input[a] == input[a].toLowerCase()) && (input[a] != input[a].toUpperCase())){
+      possible = "abcdefghijklmnopqrstuvwxyz";
+    { else if = ('0123456789'.indexOf(input[a]) !== -1){
+      possible = "0123456789";
+    { else {
+      possible = "#!@~$%&*)-_";
+    }
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
+}
+
+// the following alert should show a random character, e.g., 'r'
+alert(getRandomCharacter("Hello World!"));
+
+// the following alert should show a random character, e.g., 'W'
+// most of the time it should be different from the first alert
+alert(getRandomCharacter("Hello World!"));
+
+</script>
+</body>
+</body>
+</html>
